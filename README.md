@@ -12,9 +12,9 @@ question I have and almost all my thoughts
 throughout the whole process. many of my
 ideas written after double slashes "//"
 which I knew from previous interactions 
-that it doesn't affect the code
+that it doesn't affect the code.
 Feel free to get in touch with me,
-although I bet anyone will ever reach this
+although I bet anyone will ever read this
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
@@ -26,7 +26,7 @@ active
 
 Discord: dund0n
 
-To be fair I rarely use discord, moist of
+To be fair I rarely use discord, most of
 the times are when I'm in call with my
 friends and we play together... but it's 
 another way to contact me anyways
@@ -34,7 +34,7 @@ another way to contact me anyways
 As I told, Im new to programming and to
 GitHub as well, so I don't know if this 
 site has any communication channel. If
-I found that it has, I'll make sure to
+I find that it has, I'll make sure to
 update this README as well.
 
 
