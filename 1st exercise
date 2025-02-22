@@ -1,0 +1,21 @@
+class Lasagna
+{ 
+    public int TotalBakingTime = 40; 
+    
+    public int ExpectedMinutesInOven() 
+    {
+        return TotalBakingTime;
+    }
+    public int RemainingMinutesInOven(int MinutesAlreadyBaked) 
+    {
+        return TotalBakingTime - MinutesAlreadyBaked;
+    }
+    public int PreparationTimeInMinutes(int AmountOfLayers) 
+    {
+        return AmountOfLayers * 2;
+    }
+    public int ElapsedTimeInMinutes(int Layers, int InOvenMinutes)
+    {
+        return PreparationTimeInMinutes(Layers) + InOvenMinutes; 
+    }
+}
