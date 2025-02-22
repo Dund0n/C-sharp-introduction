@@ -16,7 +16,7 @@ that it doesn't affect the code
 Feel free to get in touch with me,
 although I bet anyone will ever reach this
 
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
 Instagram: @guttdraw
 
