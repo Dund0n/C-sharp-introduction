@@ -19,3 +19,42 @@ class Lasagna
         return PreparationTimeInMinutes(Layers) + InOvenMinutes; 
     }
 }
+/*
+I must say doind this exercise is basically requesting to a newborn to craft a nuclear bomb fro scratch. Now reading what it is expected us to answer after we do the exercise, I can confidentely say that you will have to code with an AI mentoring you and ask it questions whenever necessary. Seriously. The logic I followed needs further, didatic and better well explained every one of these key concepts:
+ 
+class - understand classes as if the main, the "thing" we're programming. For now, it defines what Variables and Functions the "thing" will have!
+ 
+variables - they are like little boxes that store a value. Then, this little box is named, so whenever I want to use the value, I can use the name of the box to refer as the value itself. It is a mathematical principle, whereas a = b, then b = a, 
+ 
+e.g:
+int age = 30; 
+ 
+(also, look at the semicolon as if it were a period at the end of a sentence)
+ 
+functions - think of a function as, really, a mathematic concept. For those who forgot what have been taught you in the 1st grade of highschool, functions get a number X and transform it into a result Y through various operations, called an >>Expression<<. For an example, if f(x) = 2 * x, this means for every value you input (x) the result (y, aka f(x)) will be its double... so f(1) = 2 * 1 = 2; f(2) = 2 * 2 = 4. Same thing in programming, except for this exercise Lucian's Luscious Lasagna, we're not going to use numbers whatsoever (see: comprehension of nondefined values/"arbitrariness" in variables). It works like this basic pattern:
+ 
+public int MyFatherAge(int MyAge)
+{
+return MyAge + 35
+}
+ 
+(quick reminder of what an int means: string = value)
+ 
+understand this function like this: a public (can be acessed outside of a class) function defines MyFatherAge as a function that depends on MyAge parameter (parameters which only exists in the used function), this means that MyAge is a variable that can assume any value. Then, it sums up 35 (in this specific scenario/example),aka f(x) = x + 35. both MyFatherAge and MyAge are values, due to "int" written before the strings. Important to notice that "return" is important because it's only there that you'll be able to type in your Expression (see line 38). Functions CAN be used in the "return", but the parameter usen in that function need to be declared as a parameter in the FIRST ever function, so it knows what to do, because of the property of the parameters (they only exist in the function they're used)
+ 
+comprehension of nondefined values/"arbitrariness" in variables - Interestingly, the exercise is completed if you do like so:
+ 
+public int TotalBakingTime = 40; 
+    
+    public int RemainingMinutesInOven(int MinutesAlreadyBaked) 
+    {
+        return TotalBakingTime - MinutesAlreadyBaked;
+    }
+ 
+according to the main concepts of functions and variables we just learned, I defined TotalBakingTime a value of 40, and, in the due exercise, we need to define RemainingMinutesInOven as the amount of time the goddamn lasagna needs to stay there in order to be ready to it CONSIDERING an ARBITRARY amount of time it may already have. This describes perfectly the function above. Notice how we need to declare MinutesAlreadyBaked, although it has no real value, unlike TotalBakingTime (wich has the value of 40). This leads me to a conclusion that this exercise is more of a "understand"
+mathematical operations more than anything. To sum up, we only needed to create 4 functions:
+1st function - this one will describe the amout of time that the recipe says the lasagna needs to stay in the oven. This is purely descriptive, and has no mathematical operations involved in the scope.
+2nd function - what if we want to know how much time is left for the lasagna to be ready?This is a simple function that grabs the amount of time needed and subtract the amount of time it has been inside of the oven.
+3rd function - This one will indicate the amount of time it needs to prepare the lasagna. It is basically the amount of layers * 2
+4th and final function - Overall time - basically, just sums up the prep time with whatever oven time it might need (that's why you can't use "TotalBakingTime")
+*/
