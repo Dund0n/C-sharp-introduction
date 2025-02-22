@@ -2,3 +2,5 @@ public static class HelloWorld
 {
     public static string Hello() => "Hello, World!";
 }
+
+//just stating some things in this code so I don't stress myself out: this exersice is mainly created to understand the UI of the site. There's nothing much to do with coding, once it's not explained: what is "public", "state", "class", it's not explained why "HelloWorld" is in Blue, why is there many curly brackets, what is "string" and why is it in green, what is "Hello()" and why I need to place quotes before and after Hello, World. And also, it doesn't explain theuse of the semicolon.
