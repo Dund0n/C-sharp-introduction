@@ -8,3 +8,11 @@ tipos de dados:
 Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F (1-9) VERDE
 Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 (1-19) VERDE
 Decimal - precisão alta, lento - 0.12345678901234567890123456789m (1-29) VERDE
+var - variável genérica e adaptável a qualquer tipo de dado
+
+formatação de Hard-Code
+\n - Enter
+\t - tab
+\" fjhvurvh9u \" - usar aspas duplas dentro do código
+\\ uawdgcliyg \\ - usar barras invertidas dentro do código
+@ - verbatim, ignora a maioria dos caracteres de escapes
