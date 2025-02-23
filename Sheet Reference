@@ -15,4 +15,7 @@ formatação de Hard-Code
 \t - tab
 \" fjhvurvh9u \" - usar aspas duplas dentro do código
 \\ uawdgcliyg \\ - usar barras invertidas dentro do código
-@ - verbatim, ignora a maioria dos caracteres de escapes
+@ - verbatim, ignora a maioria dos caracteres de escapes para aumentar a legibilidade, além de preservar espaços.
+  L nota: "duplicar ""aspas duplas"" para usá-lo"
+$ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
+  L nota: precede o verbatim
