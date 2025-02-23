@@ -1,0 +1,10 @@
+Write() - output linear
+WriteLine() - output linear + enter
+
+tipos de dados:
+"" - inferem sequência de letras, string VERMELHO
+'' - infere um caractere, char VERMELHO
+() - infere um número, int VERDE
+Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F (1-9) VERDE
+Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 (1-19) VERDE
+Decimal - precisão alta, lento - 0.12345678901234567890123456789m (1-29) VERDE
