@@ -1,20 +1,8 @@
-Hello! My name's Gustavo, but many people
-call me Dundon. I'm new to programming but
-I wanna learn C# in order to develop games
-as a hobbie.
+Hello! My name's Gustavo, but many people call me Dundon. I'm new to programming but I wanna learn C# in order to develop games as a hobbie.
 
-I'm only learning through exercism.com,
-which is a site with various languages
-courses. I also don't own a PC, this 
-forces me to depend on my cellphone 
-I'm documenting everything I do, every
-question I have and almost all my thoughts
-throughout the whole process. many of my
-ideas written after double slashes "//"
-which I knew from previous interactions 
-that it doesn't affect the code.
-Feel free to get in touch with me,
-although I bet anyone will ever read this
+I'm only learning through exercism.com, which is a site with various languages courses. I also don't own a PC, this  forces me to depend on my cellphone  I'm documenting everything I do, every question I have and almost all my thoughts throughout the whole process. many of my ideas written after double slashes "//" which I knew from previous interactions that it doesn't affect the code. Feel free to get in touch with me, although I bet anyone will ever read this
+
+UPD I'm learning through Microsoft now as well... i'ts waaaaay more didatic
 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
