@@ -1,0 +1,34 @@
+string[] IDsFalsas = ["A123", "B456", "C789"];
+int bin = 0;
+int IdNumber = 0;
+
+
+Console.WriteLine($"Primeira: {IDsFalsas[0]}");
+Console.WriteLine($"Segunda: {IDsFalsas[1]}");
+Console.WriteLine($"Terceira: {IDsFalsas[2]}");
+
+IDsFalsas[0] = "D000";
+
+Console.WriteLine($"Rewriting Primeira: {IDsFalsas[0]}");
+Console.WriteLine($"Existem {IDsFalsas.Length} Ids");
+Console.WriteLine("pois então, estas são as 3 IDs:");
+
+foreach (string ID in IDsFalsas)
+{
+    Console.WriteLine(ID);
+    bin++;
+}
+
+Console.WriteLine("hmm. Consideremos alguns valores agora:");
+
+int[] inventory = [100, 389, 000, 98];
+int sum = 0;
+
+foreach (int item in inventory)
+{
+    sum += item;
+    Console.WriteLine($"Somando {item}: {sum}");
+    bin++;
+}
+
+Console.WriteLine($"Quantidade de processos até o momento: {bin}");
