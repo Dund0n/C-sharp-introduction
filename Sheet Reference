@@ -1,13 +1,8 @@
-Write() - output linear
-WriteLine() - output linear + enter
-Trim() - retira espaços na string
-ToLower() - reescreve uma string com todas as letras minúsculas
-ToUpper() - reescreve uma string com todas as letras maiúsculas
 
 tipos de dados:
-"" - inferem sequência de letras, string VERMELHO
-'' - infere um caractere, char VERMELHO
-() - infere um número, int VERDE
+string - inferem sequência de letras, "" VERMELHO (Cor do IntelliSense)
+char - infere um único caractere, '' VERMELHO (Cor do IntelliSense)
+int - infere um número pertencente aos inteiros (Z), () (o parênteses pode ser omitido) VERDE (Cor do IntelliSense) 
 Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F (1-9) VERDE
 Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 (1-19) VERDE
 Decimal - precisão alta, lento - 0.12345678901234567890123456789m (1-29) VERDE
@@ -16,14 +11,16 @@ var - variável genérica e adaptável a qualquer tipo de dado
 formatação de Hard-Code
 \n - Enter
 \t - tab
-\" fjhvurvh9u \" - usar aspas duplas dentro do código
-\\ uawdgcliyg \\ - usar barras invertidas dentro do código
-@ - verbatim, ignora a maioria dos caracteres de escapes para aumentar a legibilidade, além de preservar espaços.
+\" Lorem ipsum \" - usar aspas duplas dentro do código
+\\ Lorem ipsum \\ - usar barras invertidas dentro do código
+@ - verbatim, ignora a maioria dos caracteres de escapes para aumentar a legibilidade, 
+    além de preservar espaços.
   L nota: "duplicar ""aspas duplas"" para usá-lo"
 $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
-  L nota: precede o verbatim
-== - atribuição de uma coisa á outra, igualdade
-!= - a não atribuição de uma coisa com coutra, desigualdade
+  L nota: deve precede o verbatim, caso houver
+= - atribuição
+== - checa igualdades
+!= - checa desigualdades
 > - compara o termo da esquerda, supondo ele maior que o da direita
 < - compara o termo da esquerda, supondo ele menor que o da direita
 ? - Feita a comparação, o resultado "True" atribui o resultado que o sucede
@@ -32,21 +29,32 @@ $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
 
 convenções
 variável: escrever no estilo camelCase (primeira letra minúscula, e, a cada palavra
-nova, separação não por espaço, mas sim por letra maiúscula na pirimeira letra
-de todas as palavras subsequentes, SEM espaço entre elas)
+          nova, separação não por espaço, mas sim por letra maiúscula na pirimeira 
+          letra de todas as palavras subsequentes, SEM espaço entre elas)
 constantes: escrever no estilo PascalCase (primeira letra maiúscula, e, a cada 
-palavra nova, separação não por espaço, mas sim por letra maiúscula na pirimeira 
-letra de todas as palavras subsequentes, SEM espaço entre elas)
+            palavra nova, separação não por espaço, mas sim por letra maiúscula na
+            pirimeira letra de todas as palavras subsequentes, SEM espaço entre elas)
+
+- aprenderei mais convenções com o passar do tempo
+- ter bom senso com as linhas vazias para separar blocos de código e saber como comentar 
+  códigos da forma certa usando /* 
+*/
+- muito provavelmente, no entanto, como estou n basiquinho, a cada bloco de código, farei
+  comentarios breves utilizando // para lembrar o que aquela parte deveria fazer
 
 
 vocabulário
-[] - colchetes inferem em uma matriz. Matriz é uma coleção de um mesmo tipo de dado.
-.new() - cria um novo objeto para um termo de referência que o precede
-.Length() - método que conta o tamanho de algo
+...[] - colchetes inferem em uma matriz. Matriz é uma coleção de um mesmo tipo de dado.
+new - cria um novo objeto para um termo de referência que o precede
+.Length - propriedade que pode ser atribuída a uma string e conta o tamanho dela
           L e.g.: Matrix.length conta quantos elementos estão na matriz "Matrix"
 Random - atribui á variavel posposta a ela o atributo de ser int e de ser aleatório. 
          Ou seja, cria uma nova instância dotada da classe '.Random'
 .Next() - dados 2 valores dentro dos seus parênteses, mínimo e máximo, esse método gera 
           um valor dentro do range especificado mediado pela instância '.Random' 
           já declarada e anteposta a ela
-
+Write() - output linear
+WriteLine() - output linear + enter
+Trim() - retira espaços da string
+ToLower() - reescreve uma string com todas as letras minúsculas
+ToUpper() - reescreve uma string com todas as letras maiúsculas
