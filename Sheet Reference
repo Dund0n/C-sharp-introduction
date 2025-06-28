@@ -1,5 +1,8 @@
 Write() - output linear
 WriteLine() - output linear + enter
+Trim() - retira espaços na string
+ToLower() - reescreve uma string com todas as letras minúsculas
+ToUpper() - reescreve uma string com todas as letras maiúsculas
 
 tipos de dados:
 "" - inferem sequência de letras, string VERMELHO
@@ -19,6 +22,17 @@ formatação de Hard-Code
   L nota: "duplicar ""aspas duplas"" para usá-lo"
 $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
   L nota: precede o verbatim
+== - atribuição de uma coisa á outra, igualdade
+!= - a não atribuição de uma coisa com coutra, desigualdade
+
+convenções
+variável: escrever no estilo camelCase (primeira letra minúscula, e, a cada palavra
+nova, separação não por espaço, mas sim por letra maiúscula na pirimeira letra
+de todas as palavras subsequentes, SEM espaço entre elas)
+constantes: escrever no estilo PascalCase (primeira letra maiúscula, e, a cada 
+palavra nova, separação não por espaço, mas sim por letra maiúscula na pirimeira 
+letra de todas as palavras subsequentes, SEM espaço entre elas)
+
 
 vocabulário
 [] - colchetes inferem em uma matriz. Matriz é uma coleçao de um mesmo tipo de dado.
