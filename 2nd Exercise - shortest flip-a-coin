@@ -1,0 +1,10 @@
+1st attempt
+Random coin = new();
+int flip = coin.Next(1,3);
+Console.WriteLine(flip == 1 ? "Flip Result: Heads" : "Flip Result: Tails");
+
+then I remembered I could supress this useless variable by putting it between
+parenthesis, like that:
+
+Random coin = new();
+Console.WriteLine((coin.Next(1,3) == 1) ? "Flip Result: Heads" : "Flip Result: Tails");
