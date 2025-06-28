@@ -19,3 +19,10 @@ formatação de Hard-Code
   L nota: "duplicar ""aspas duplas"" para usá-lo"
 $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
   L nota: precede o verbatim
+
+vocabulário
+[] - colchetes inferem em uma matriz. Matriz é uma coleçao de um mesmo tipo de dado.
+.new - cria um novo objeto para um termo de referência que o precede
+.length - método que conta o tamanho de algo
+  L e.g.: Matrix.length conta quantos elementos estão na matriz "Matrix"
+
