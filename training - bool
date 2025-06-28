@@ -39,4 +39,36 @@ Console.Write(@"Then what's the sum of the amount of letters of those 2 words? L
 Console.WriteLine(@$"{Mangos.Length}"+$"{Mustard.Length}");
 Console.Write(@"Is this tuff? Let's see. Result: ");
 bool isThisTuff = true;
-Console.Write($"{isThisTuff}");
+Console.WriteLine($"{isThisTuff}");
+
+int[] numbers = [10, 100, 69, 67, 35, 09, 11];
+int bin = 0;
+Console.WriteLine(@" Now consider these numbers: 10, 100, 69, 67, 35, 09 and 11. 
+How many of those numbers are tuff?");
+foreach (int number in numbers)
+{
+    if (number == 67 || number == 69)
+    {
+        bin++;
+    }
+
+}
+
+Console.Write($"There are {bin} tuff numbers: 67 an 69");
+
+string fraseIncrível = @"Mom - Mark was telling us how intresting his day was
+Mark - Guess who's finnaly getting his powers?
+Omni-man - ... Are you sure?
+mark - Pretty sure ...";
+Console.Write($@"Does the following dialogue contains an infamous phrase?
+{fraseIncrível} 
+Result:");
+Console.WriteLine(fraseIncrível.Contains("Are you sure?"));
+Console.WriteLine("What's the frase then?");
+Console.WriteLine($@"3rd one: ""Are you sure?""");
+
+Random quantidade = new();
+int Compras = quantidade.Next(1, 130);
+Console.WriteLine($"Quantidade de compras: {Compras}");
+int Desconto = Compras > 100 ? 50 : 10;
+Console.WriteLine("o seu desconto será de " + Desconto + "%");
