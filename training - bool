@@ -1,0 +1,42 @@
+Console.Write("Is a = a? Let's see. Result: ");
+Console.WriteLine("a" == "a");
+Console.Write("Is a = A? Let's see. Result: ");
+Console.WriteLine("a" == "A");
+Console.Write("Is 1 = 2? Let's see. Result: ");
+Console.WriteLine(1 == 2);
+Console.Write($@"If I declare ""a"" as an variable and say it is equal ""a"", wil? Let's see. Result: ");
+string myValue = "a";
+Console.WriteLine(myValue == "a");
+
+Console.Write("Is a \u2260 a? Let's see. Result: ");
+Console.WriteLine("a" != "a");
+Console.Write("Is a \u2260 A? Let's see. Result: ");
+Console.WriteLine("a" != "A");
+Console.Write("Is 1 \u2260 2? Let's see. Result: ");
+Console.WriteLine("1" != "2");
+Console.Write($@"If I declare ""a"" as an variable and say it is not equal ""a"", wil? Let's see. Result: ");
+Console.WriteLine(myValue != "a");
+
+Console.Write("Is 1 \u003E 2? Let's see. Result: ");
+Console.WriteLine(1 > 2);
+Console.Write("Is 1 \u003C 2? Let's see. Result: ");
+Console.WriteLine(1 < 2);
+Console.Write("Is 1 \u2264 1? Let's see. Result: ");
+Console.WriteLine(1 <= 1);
+Console.Write("Is 1 \u2265 1? Let's see. Result: ");
+Console.WriteLine(1 >= 1);
+
+Console.Write(@"Does the word ""Mangos"" have 6 letters? Let's see. Result: ");
+string Mangos = "mangos";
+Console.WriteLine(Mangos.Length == 6);
+Console.Write(@"Does Kendrick Lamar's song ""Tv Off"" contains the word ""Mustard""? Let's see. Result: ");
+bool hasMustard = true;
+Console.WriteLine(hasMustard == true);
+Console.Write(@"Does the word ""Mustard"" have 7 letters? Let's see. Result: ");
+string Mustard = "Mustard";
+Console.WriteLine(Mustard.Length == 7);
+Console.Write(@"Then what's the sum of the amount of letters of those 2 words? Let's see. Result: ");
+Console.WriteLine(@$"{Mangos.Length}"+$"{Mustard.Length}");
+Console.Write(@"Is this tuff? Let's see. Result: ");
+bool isThisTuff = true;
+Console.Write($"{isThisTuff}");
