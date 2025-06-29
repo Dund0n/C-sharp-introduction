@@ -1,0 +1,86 @@
+3 way to write the same code:
+
+
+string permission = "User";
+int level = 19;
+Console.WriteLine(level > 55 && permission.Contains("Admin") ? "Welcome, Super Admin user." : level <= 55 && permission.Contains("Admin") ? "Welcome, Admin user." : level >= 20 && permission.Contains("Manager") ? "Contact an Admin for access." : (level < 20 && permission.Contains("Manager")) || !permission.Contains("Manager") || (!permission.Contains("Admin")) ? "You do not have sufficient privileges." : "");
+
+========================================================
+
+string permission = "Admin";
+int level = 90;
+
+if (permission.Contains("Admin"))
+{
+    if (level > 55)
+    {
+        Console.WriteLine("Welcome, Super Admin user.");
+    }
+
+    else
+    {
+        Console.WriteLine("Welcome, Admin user");
+    }
+}
+if (permission.Contains("Manager"))
+{
+    if (level >= 20)
+    {
+        Console.WriteLine("Contact an Admin for access");
+    }
+
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
+}
+
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
+
+========================================================
+
+string permission = "Admin";
+int level = 80;
+
+switch (permission)
+{
+    default:
+
+        Console.WriteLine("You do not have sufficient privileges.");
+        break;
+        
+    case "Admin":
+
+        switch (level)
+        {
+            case > 55:
+                Console.WriteLine("Welcome, Super Admin user.");
+                break;
+
+            case <= 55:
+                Console.WriteLine("Welcome, Admin user");
+                break;
+
+        }
+
+    break;
+
+    case "Manager":
+
+        switch (level)
+        {
+            case >= 20:
+                Console.WriteLine("Contact an Admin for access");
+                break;
+
+            case < 20:
+                Console.WriteLine("You do not have sufficient privileges.");
+                break;
+        }
+
+    break;
+
+}
