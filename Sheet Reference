@@ -26,6 +26,12 @@ $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
 ? - Feita a comparação, o resultado "True" atribui o resultado que o sucede
 : - Feita a comparação, o resultado "False" atribui o resultado que o sucede.
   L ":" vem depois de "?"
+|| - ou, serve apenas para comparações booleanas
+&& - e, serve apenas para comparações booleanas
+! - não, serve apenas para comparações booleanas
+or - patter matching lógico ou, para switch cases 
+and - patter matching lógico e, para switch cases 
+not - patter matching lógico não, para switch cases 
 
 convenções
 
@@ -59,3 +65,8 @@ Random - atribui á variavel posposta a ela o atributo de ser int e de ser      
 .Contains() - checa se há um algo, declarado dentro dele, em um outro algo
 foreach (...) - consegue acessar todos os elementos de uma matriz, um a um, e
                 os atribui a variável que foi nomeada
+switch(...){} - utilizando a variável em parênteses, atribui casos com valores
+                fixos e atuando como if elses
+case ...: - casos que fazem algo dependendo do valor atribuído à variável e
+            declarado após
+break; - separa cases
