@@ -1,0 +1,23 @@
+int employeelevel = 100;
+string employeeName = "John Smith";
+string Title = "";
+
+switch (employeelevel)
+{
+    default: //Associate 
+        Title = "Associate";
+        break;
+
+    case 100 or 200: //Junior Associate  
+        break;
+
+    case 300: //Manager 
+        Title = "Manager";
+        break;
+
+    case 400: // Senior Manager 
+        Title = "Senior Manager";
+        break;
+}
+
+Console.WriteLine("Welcome back, " + Title + " " + employeeName);
