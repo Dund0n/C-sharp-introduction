@@ -70,3 +70,4 @@ switch(...){} - utilizando a variável em parênteses, atribui casos com valores
 case ...: - casos que fazem algo dependendo do valor atribuído à variável e
             declarado após
 break; - separa cases
+.Split() - pega a string e separa ela a depender de um char 
