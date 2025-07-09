@@ -18,6 +18,17 @@ formatação de Hard-Code
   L nota: "duplicar ""aspas duplas"" para usá-lo"
 $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
   L nota: deve precede o verbatim, caso houver
++ - adição ou concatenação
+- - subtração
++= - soma o mesmo elemento com mais algo
+-= - subrtrai o mesmo elemento com algo
+++ - shortcut para += 1
+-- - shortcut para -= 1
+/ - divisão (cuidado, usar float, double ou decimal)
+/= divide o mesmo elemento com algo
+* - multiplicação 
+*= multiplica o mesmo elemento com algo
+% - cálculo do resto da divisão dos números
 = - atribuição
 == - checa igualdades
 != - checa desigualdades
@@ -70,4 +81,14 @@ switch(...){} - utilizando a variável em parênteses, atribui casos com valores
 case ...: - casos que fazem algo dependendo do valor atribuído à variável e
             declarado após
 break; - separa cases
-.Split() - pega a string e separa ela a depender de um char 
+.Split() - pega a string e separa ela a depender de um char
+for(...) {} - similar ao foreach. utilia um index para criar um sistema de
+              numeração. pode ser usado com Matrizes.Length
+index (i) - no for, é, normalmente, adicionado da seguinte maneira:
+            e.g.: i = 0; i < 10; i++;
+            i = 0 é o inicializador. É a partir desse número que a contagem começa
+            i < 10 é a condição para o elemento seguinte. Enquanto i é....
+            i ++ é o incremento. Satisfeitas as condições acima, +1
+.Join() - concatena vários valores e os separa a depender de outra string
+List<T> - Matrix variável de elementos
+.Add() - adiciona o que quiser na lista 
