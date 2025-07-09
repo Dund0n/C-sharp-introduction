@@ -3,7 +3,8 @@ tipos de dados:
 string - inferem sequência de letras, "" VERMELHO (Cor do IntelliSense)
 char - infere um único caractere, '' VERMELHO (Cor do IntelliSense)
 int - infere um número pertencente aos inteiros (Z), () (o parênteses pode ser           omitido) VERDE (Cor do IntelliSense) 
-Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F (1-9)          VERDE
+Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F (1-9)
+        VERDE
 Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 (1-19) VERDE
 Decimal - precisão alta, lento - 0.12345678901234567890123456789m (1-29) VERDE
 var - variável genérica e adaptável a qualquer tipo de dado
@@ -47,7 +48,7 @@ not - patter matching lógico não, para switch cases
 convenções
 
 variável: escrever no estilo camelCase (primeira letra minúscula, e, a cada palavra
-          nova, separação não por espaço, mas sim por letra maiúscula na pirimeira 
+          nova, separação não por espaço, mas sim por letra maiúscula na pirimeira
           letra de todas as palavras subsequentes, SEM espaço entre elas)
 constantes: escrever no estilo PascalCase (primeira letra maiúscula, e, a cada 
             palavra nova, separação não por espaço, mas sim por letra maiúscula na
