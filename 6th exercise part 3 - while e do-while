@@ -1,0 +1,20 @@
+string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
+int periodLocation;
+string myStringSlice;
+
+foreach (string myString in myStrings)
+{
+    periodLocation = myString.IndexOf(".");
+    string currentMyString = myString;
+
+    while (periodLocation != -1)
+    {
+        myStringSlice = currentMyString.Substring(0, periodLocation);
+        Console.WriteLine(myStringSlice);
+
+        currentMyString = currentMyString.Remove(0, periodLocation + 1).TrimStart();
+        periodLocation = currentMyString.IndexOf(".");
+    }
+
+    Console.WriteLine(currentMyString);
+}
