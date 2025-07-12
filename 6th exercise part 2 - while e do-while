@@ -8,7 +8,7 @@ Console.WriteLine(Greeting);
 
 do
 {
-    userInput = Console.ReadLine().Trim().ToLower();
+    userInput = (Console.ReadLine() ?? "").Trim().ToLower();
     validInput = userInput.Equals(roles[0]) || userInput.Equals(roles[1]) || userInput.Equals(roles[2]);
     if (!validInput)
     {
