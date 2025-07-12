@@ -98,7 +98,7 @@ switch(...){} - utilizando a variável em parênteses, atribui casos com valores
                 fixos e atuando como if elses
 case ...: - casos que fazem algo dependendo do valor atribuído à variável e
             declarado após
-break; - separa cases
+break; - encerra o loop e sai do laço
 .Split() - pega a string e separa ela a depender de um char
 for(...) {} - similar ao foreach. utilia um index para criar um sistema de
               numeração. pode ser usado com Matrizes.Length
@@ -111,3 +111,10 @@ index (i) - no for, é, normalmente, adicionado da seguinte maneira:
 .Join() - concatena vários valores e os separa a depender de outra string
 List<T> - Matrix variável de elementos
 .Add() - adiciona o que quiser na lista 
+do{...} while() - itera o bloco de código uma vez antes de avaliar uma 
+                  expressão booliana e potencialmente sair da iteração
+while() - avalia uma expressão booliana imediatamente, itera o bloco e
+          avalia essa mesma expressão depois dessa iteração para tentar 
+          sair da iteração.
+continue; - pula os processos para ir direto para a avaliação da expressão
+
