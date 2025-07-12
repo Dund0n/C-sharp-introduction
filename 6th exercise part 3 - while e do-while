@@ -1,14 +1,16 @@
 string[] sentences = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
-int periodLocation;
-string sentenceWithoutPeriod;
 
 foreach (string sentence in sentences)
 {
-    periodLocation = sentence.IndexOf(".");
-    string currentSentence = sentence;
+    string currentSentence = sentence; //variável auxiliar
+    int periodLocation;
+
+    periodLocation = currentSentence.IndexOf(".");  
 
     while (periodLocation != -1)
     {
+        string sentenceWithoutPeriod;
+
         sentenceWithoutPeriod = currentSentence.Substring(0, periodLocation);
         Console.WriteLine(sentenceWithoutPeriod);
 
