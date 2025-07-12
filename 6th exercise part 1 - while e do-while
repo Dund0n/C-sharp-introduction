@@ -1,0 +1,42 @@
+string? userInput;
+int assignedNumber = 0;
+bool validNumber = false;
+bool validInput = false;
+
+Console.WriteLine("Pick a number between 5 and 10");
+
+do
+{
+    userInput = Console.ReadLine();
+    validInput = int.TryParse(userInput, out assignedNumber);
+
+
+    if (validInput == true)
+    {
+        if (assignedNumber > 5 && assignedNumber < 10)
+        {
+            validNumber = true;
+            continue;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Please, insert a valid number");
+            Console.ResetColor();
+            validInput = false;
+            continue;
+        }
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Please, type in a number and try again");
+        Console.ResetColor();
+        validInput = false;
+    }
+
+} while (validNumber == false);
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("Your input value (" + assignedNumber + ") has been accepted");
+Console.ResetColor();
