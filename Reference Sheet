@@ -44,7 +44,8 @@ $ - interpolação - utiliza-se para mencionar variáveis entre chaves {}
 ! - não, serve apenas para comparações booleanas
 or - patter matching lógico ou, para switch cases 
 and - patter matching lógico e, para switch cases 
-not - patter matching lógico não, para switch cases 
+not - patter matching lógico não, para switch cases
+?? - operador de coalescência, ele atribui um valor padrão para um input nulo
 
 convenções
 
