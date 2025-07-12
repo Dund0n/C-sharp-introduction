@@ -83,9 +83,15 @@ Random - atribui á variavel posposta a ela o atributo de ser int e de ser
 .Write() - output linear
 .WriteLine() - output linear + enter
 .Trim() - retira espaços da string
+.TrimStart() - retira apenas espaços à esqueda da string
+.TrimEnd() - retira apenas espaços à direita da string
 .ToLower() - reescreve uma string com todas as letras minúsculas
 .ToUpper() - reescreve uma string com todas as letras maiúsculas
 .Contains() - checa se há um algo, declarado dentro dele, em um outro algo
+.IndexOf() - acha a primeira ocorrência de algo
+.Substring(start, length) - pega apenas parte de uma string (começando pela
+                            posição do "start", com o tamanho de "length"
+.Remove() - corta parte da string fora exatamente como o .Substring()
 foreach (...) - consegue acessar todos os elementos de uma matriz, um a um, e
                 os atribui a variável que foi nomeada
 switch(...){} - utilizando a variável em parênteses, atribui casos com valores
