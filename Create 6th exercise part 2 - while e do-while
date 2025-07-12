@@ -1,0 +1,26 @@
+string? userInput;
+string Greeting = "Enter your role name (Administrator, Manager, or User)";
+bool validInput = false;
+string[] roles = ["administrator", "manager", "user",];
+
+
+Console.WriteLine(Greeting);
+
+do
+{
+    userInput = Console.ReadLine().Trim().ToLower();
+    validInput = userInput.Equals(roles[0]) || userInput.Equals(roles[1]) || userInput.Equals(roles[2]);
+    if (!validInput)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"The role name that you entered, \"{userInput}\" is not valid. {Greeting}");
+        Console.ResetColor();
+
+    }
+
+} while (validInput == false);
+
+Console.ForegroundColor = ConsoleColor.DarkGreen;
+Console.WriteLine($"Your input value ({userInput}) has been accepted.");
+Console.ResetColor();
+
