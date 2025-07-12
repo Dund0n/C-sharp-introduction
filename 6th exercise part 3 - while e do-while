@@ -1,20 +1,20 @@
-string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
+string[] sentences = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
 int periodLocation;
-string myStringSlice;
+string sentenceWithoutPeriod;
 
-foreach (string myString in myStrings)
+foreach (string sentence in sentences)
 {
-    periodLocation = myString.IndexOf(".");
-    string currentMyString = myString;
+    periodLocation = sentence.IndexOf(".");
+    string currentSentence = sentence;
 
     while (periodLocation != -1)
     {
-        myStringSlice = currentMyString.Substring(0, periodLocation);
-        Console.WriteLine(myStringSlice);
+        sentenceWithoutPeriod = currentSentence.Substring(0, periodLocation);
+        Console.WriteLine(sentenceWithoutPeriod);
 
-        currentMyString = currentMyString.Remove(0, periodLocation + 1).TrimStart();
-        periodLocation = currentMyString.IndexOf(".");
+        currentSentence = currentSentence.Remove(0, periodLocation + 1).TrimStart();
+        periodLocation = currentSentence.IndexOf(".");
     }
 
-    Console.WriteLine(currentMyString);
+    Console.WriteLine(currentSentence);
 }
