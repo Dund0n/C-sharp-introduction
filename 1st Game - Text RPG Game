@@ -1,0 +1,510 @@
+bool gameActive = true;
+bool menu;
+bool monsterEverKilled = false;
+
+int attempt = 0;
+int currentTurn = 0;
+
+
+int currentCash = 0;
+int monsterMoneyDrop = 0;
+const int playerGuaranteedDmg = 2;
+const int monsterGuaranteedDmg = 0;
+
+Random rng = new();
+
+Console.Clear();
+Console.WriteLine("\n\nPress Enter to start!\n");
+Console.ReadLine();
+Console.Clear();
+
+string SlashFrame1 = @" 
+                            °    
+
+
+
+
+
+
+
+
+
+
+
+
+";
+string SlashFrame2 = @"
+                                 _ _  
+                            °         
+
+
+
+
+
+
+
+
+
+
+
+
+";
+string SlashFrame3 = @"
+                                 _ _  
+                            °         `°q.
+                                          `Sb
+                                            
+                                            
+
+
+
+
+
+
+
+
+
+
+";
+string SlashFrame4 = @"
+                                 _ _  
+                            °         `°q.
+                                          `Sb
+                                            $b
+                                            :Ib
+                                            ijO
+                                          .dSS´
+                                        dS$SS´
+                                     .dS$SS?´
+                                  .dS$$$$$?
+                              .dS$$$$$$$?´
+                         .udS$$$$$$$S?´
+     .            _.udSSS$$$$$$?^^°´ 
+       ""^SS$$$$$$$$$SSS?^°°´
+           `¨¨¨¨¨´
+";
+string SlashFrame5 = @"
+
+ 
+
+
+
+
+
+
+
+
+
+
+       
+       ""^SS$$$$$$$$$SSS?^°°´
+           `¨¨¨¨¨´
+";
+string SlashFrame6 = @"
+
+
+
+
+
+
+
+
+
+
+
+     . 
+     
+
+";
+
+
+string punchFrame1 = @"
+
+
+
+
+
+
+
+                      !Q$$S             
+                       Q$$SS           
+
+
+
+
+
+
+                                                
+";
+string punchFrame2 = @"
+                                                
+                                                
+                                                
+                                    
+                              
+                   $k¨YS$k`Y$              
+                  S$$ !Q$$S Q$            
+                  $S$i Q$$SS $S             
+                   S$$ QS$$SD $            
+                      : SSSOO             
+                         
+                        
+                                   
+                                                
+                                                
+";
+string punchFrame3 = @"
+                                                
+                                                
+                                                
+                    .eS∩e_                 
+                e∩sSS$$$$$$$$$               
+               $$$$$k¨YS$k`Y$$SSi              
+              $O""$S$$ !Q$$S Q$SSI:              
+              $$ Q$S$i Q$$SS $SSSI             
+              $$b QS$$ QS$$SD $SSU            
+               SSO SSS: SSSOO S$$            
+                ª^ `""*³ '*^°' `""           
+                         Q$$$           
+                          `**""            
+                                                
+                                                
+";
+string punchFrame4 = @"
+                                                
+                                                
+                                                
+                    .eS∩e_ eS∩e.                
+                e∩sSS$$$$$$$$$SSS               
+             ∩s$$$$$k¨YS$k`Y$$SSi.              
+            iS$O""$S$$ !Q$$S Q$SSI:              
+            iS$$ Q$S$i Q$$SS $SSSI:             
+             S$$b QS$$ QS$$SD $SSUO.            
+             `?SSO SSS: SSSOO S$$$$:            
+               `ª^ `""*³ '*^°' `""*³´.d           
+                         Q$$$$$SSSSP²           
+                          `**""""""´            
+                                                
+                                                
+";
+string punchFrame5 = @"
+          °    ,A.   jk     jk °             
+            A  j##l_j###l__j##l._            
+           j#lo####P´   `""´  º""Q##>   °       
+          j###P""´   .eS∩e_ eS∩e.  #l      .      
+        j##P´   e∩sSS$$$$$$$$$SSS  #.J#Γ      
+ .    <###I  ∩s$$$$$k?YS$k`Y$$SSi.  Q#l´       
+       `j#  iS$O""$S$$ !Q$$S Q$SSI:  I;       
+        #i  iS$$ Q$S$i Q$$SS $SSSI:  Q#o.    
+  .    <##I. S$$b QS$$ QS$$SD $SSUO. :###>   
+         `jb `?SSO SSS: SSSOO S$$$$:  Qf´    
+          ##b. `ª^ `""*³ '*^°' `""*³´.d  :#      
+          Vº`?######o__  Q$$$$$SSSSP²  dl     
+             j#º´ V#V'j#. `**""""""´ :i#ù#>  °  
+             V    `V  `?########oooo####f´   
+                        `V´   º#V´`v´`V´     
+";
+string punchFrame6 = @"                                                
+                                                
+                                                
+                    .eS∩e_ eS∩e.                
+                e∩sSS$$$$$$$$$SSS               
+             ∩s$$$$$k¨YS$k`Y$$SSi.              
+            iS$O""$S$$ !Q$$S Q$SSI:              
+            iS$$ Q$S$i Q$$SS $SSSI:             
+             S$$b QS$$ QS$$SD $SSUO.            
+             `?SSO SSS: SSSOO S$$$$:            
+               `ª^ `""*³ '*^°' `""*³´.d           
+                         Q$$$$$SSSSP²           
+                          `**""""""´            
+                                                
+                                                
+";
+
+
+int frameDelay = 50;
+string[] SlashAnimation = [SlashFrame1, SlashFrame2, SlashFrame3, SlashFrame4, SlashFrame5, SlashFrame6, ""];
+string[] punchAnimation = [punchFrame1, punchFrame2, punchFrame3, punchFrame4, punchFrame5, punchFrame6, ""];
+
+
+while (gameActive) //jogo 
+{
+
+    int playerHp = 100;
+    int monsterHp = 100;
+    currentTurn = 0;
+    menu = true;
+    attempt++;
+
+    do
+    {
+        while (menu) //actions
+        {
+            int entities = 2;
+            string name = "";
+            int hp = 0;
+            int guaranteedDmg = 0;
+            int money = 0;
+
+            string[,] data = new string[entities, 5];
+
+            for (int i = 0; i < 2; i++) // data for displayed info
+            {
+                switch (i)
+                {
+                    case 0: // Player data 
+                        {
+                            name = "PLAYER";
+                            hp = 100;
+                            guaranteedDmg = 2;
+                            money = currentCash;
+                            break;
+                        }
+                    case 1: // Monter data 
+                        {
+                            name = "MONSTER";
+                            hp = 100;
+                            guaranteedDmg = 0;
+                            break;
+                        }
+                }
+
+                data[i, 0] = "\t\t\t" + name + " INFORMATION:\n";
+                data[i, 1] = "Base health:   \t\t\t" + hp + " hp";
+                data[i, 2] = "Base dmg:   \t\t\tbetween 1 - 10 dmg";
+                data[i, 3] = "Guaranteed dmg:   \t\t" + guaranteedDmg + " dmg";
+
+                if (money == 1) data[0, 4] = "Purse   \t\t\t" + money + " coin";
+                else data[0, 4] = "Purse   \t\t\t" + money + " coins";
+
+                data[1, 4] = "Drops:   \t\t\tbetween 1 - 20 coins";
+
+            }
+
+            Console.WriteLine("\n\n\t\t\tACTIONS\n\n\n");
+            Console.Write("Show player info - P\nShow monster info - M\nBEGIN BATTLE! - any\n");
+
+            Console.Write("Type here your action: ");
+            ConsoleKeyInfo key = Console.ReadKey(true);
+
+            switch (key.Key) //.... display info
+            {
+
+                case ConsoleKey.P: //player displayed info 
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n" + new string('=', 65));
+
+                        for (int i = 0; i < 5; i++) Console.WriteLine(data[0, i]);
+
+                        Console.WriteLine(new string('=', 65));
+                        break;
+                    }
+
+                case ConsoleKey.M: //monster displayed info
+                    {
+                        if (monsterEverKilled)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("\n\n" + new string('=', 65));
+
+                            for (int i = 0; i < 5; i++) Console.WriteLine(data[1, i]);
+
+                            Console.WriteLine(new string('=', 65));
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\n\n\t\tYou have to kill the monster first");
+                            Console.ResetColor();
+                        }
+
+                        break;
+                    }
+
+                default: //start battle
+                    {
+                        menu = false;
+                        break;
+                    }
+
+            }
+        }
+
+        Console.Clear();
+        Console.WriteLine("\n\nAttempt " + attempt + ":\n");
+        Console.WriteLine("Your Initial health: " + playerHp + " hp\nMonster's Initial health: " + monsterHp + " hp");
+
+        int playerAttack;
+        int monsterAttack;
+
+        currentTurn++;
+        //Console.Clear();
+
+        Console.Write("\n\nTurn: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(currentTurn + "\n\n");
+        Console.ResetColor();
+
+        playerAttack = rng.Next(1, 11);
+        monsterHp -= playerAttack + playerGuaranteedDmg;
+        if (monsterHp <= 0) monsterHp = 0;
+
+        foreach (string frame in SlashAnimation) //animação!!
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Clear();
+            Console.WriteLine(frame);
+            Thread.Sleep(frameDelay);
+        }
+
+        Console.Clear(); Console.ResetColor();
+
+        Console.Write("\n\nTurn: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(currentTurn + "\n\n");
+        Console.ResetColor();
+
+        Console.Write("Hero's attack inflicts ");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write(playerAttack + playerGuaranteedDmg);
+        Console.ResetColor();
+        Console.WriteLine(" dmg!\n");
+        Console.WriteLine("Your HP: " + playerHp + "\t\tMonster HP: " + monsterHp + " ( -" + (playerAttack + playerGuaranteedDmg) + " )\n");
+        Thread.Sleep(1000);
+
+        if (monsterHp <= 0) // monstro morreu 
+        {
+            //Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Write("Monster defeated!\n");
+            Console.ResetColor();
+
+            monsterMoneyDrop = rng.Next(0, 21);
+            currentCash += monsterMoneyDrop;
+
+            continue;
+        }
+
+        monsterAttack = rng.Next(1, 11);
+        playerHp -= monsterAttack;
+        if (playerHp <= 0) playerHp = 0;
+
+        foreach (string frame in punchAnimation) //animação!!
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Clear();
+            Console.WriteLine(frame);
+            Thread.Sleep(frameDelay);
+        }
+
+        Console.Write("\n\nTurn: ");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(currentTurn + "\n\n");
+        Console.ResetColor();
+
+        Console.Write("Monster's attack inflicts ");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write(monsterAttack + monsterGuaranteedDmg);
+        Console.ResetColor();
+        Console.WriteLine(" dmg!\n");
+        Console.WriteLine("Your HP: " + playerHp + " ( -" + monsterAttack + " )\tMonster HP: " + monsterHp + "\n");
+        Thread.Sleep(1000);
+
+        if (playerHp <= 0) // jogador morreu 
+        {
+            Console.WriteLine("Player defeated!");
+            Console.WriteLine("Your HP: " + playerHp + "\t\tMonster HP: " + monsterHp + "\n");
+
+            currentCash = 0;
+        }
+
+
+
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("Current health: " + playerHp + " hp\nMonster's current health: " + monsterHp + " hp\n");
+        Console.ResetColor();
+        Console.Write("Press Enter for the next round ");
+        Console.ReadLine();
+
+
+    } while (monsterHp > 0 && playerHp > 0);
+
+    if (playerHp == 0) //death 
+    {
+        monsterEverKilled = false;
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine("You died.\n\n" + "\tRemaining Monster HP: " + monsterHp + "\n");
+        Console.WriteLine("You lost all your money...");
+        Console.ResetColor();
+    }
+    else //win 
+    {
+        monsterEverKilled = true;
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("You win!");
+        Console.ResetColor();
+        Console.WriteLine("\n\tRemaining Hp: " + playerHp + "\n");
+
+        if (currentCash == 0) Console.WriteLine("The monster didn't drop any cash...");
+        else
+        {
+            Console.Write("You earned ");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write(monsterMoneyDrop);
+            Console.ResetColor();
+            Console.WriteLine(" coins from the monster.");
+        }
+    }
+
+    Console.Write("You currently have ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.Write(currentCash);
+    Console.ResetColor();
+
+    if (currentCash == 1) Console.WriteLine(" coin in your purse\n");
+    else Console.WriteLine(" coins in your purse\n");
+
+    Console.Write("Retry? ");
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write("Y ");
+    Console.ResetColor();
+    Console.Write("/");
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine(" N\n");
+    Console.ResetColor();
+
+    bool retryAvailable = true;
+
+    while (retryAvailable) //Retry?
+    {
+        ConsoleKeyInfo key = Console.ReadKey(true);
+
+        switch (key.Key) //Answers
+        {
+            case ConsoleKey.N: // pressed N 
+                {
+                    gameActive = false;
+                    retryAvailable = false;
+                    break;
+                }
+            case ConsoleKey.Y: // pressed Y
+                {
+                    retryAvailable = false;
+
+                    break;
+                }
+            default: // pressed neither N nor Y
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("\nPlease, type either Y or N\n");
+                    Console.ResetColor();
+                    continue;
+                }
+
+        }
+    }
+}
+Console.WriteLine("\n\tThanks for playing!\n\n");
