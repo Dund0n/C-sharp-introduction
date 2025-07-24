@@ -15,8 +15,8 @@ números - infere um número tipo integral, () (o parênteses pode ser
          ulong: 0 a 18446744073709551615
       L tipos de números flutuantes (com casas decimais)
          Float: -3,4028235E+38 to 3,4028235E+38 (precisão de 9 casas)
-         Double: -1,7976931348623157E+308 to 1,7976931348623157E+308 (precisão de
-                  17 casas)
+         Double: -1,7976931348623157E+308 to 1,7976931348623157E+308 (precisão
+                 de 17 casas)
          Decimal: -79228162514264337593543950335 to 79228162514264337593543950335
                   (precisão de 29 casas)
 var - variável genérica e adaptável a qualquer tipo de dado
