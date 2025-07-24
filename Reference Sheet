@@ -18,7 +18,23 @@ números - infere um número tipo integral, () (o parênteses pode ser
          Double: -1,7976931348623157E+308 a 1,7976931348623157E+308 (precisão
                  de 17 casas)
          Decimal: -79228162514264337593543950335 a 
-                  79228162514264337593543950335       (precisão de 29 casas)
+                  79228162514264337593543950335 (precisão de 29 casas)
+
+coerção: técnica para converter tipos de dados:
+         L conversão de expansão: baixa precisão > alta precisão
+            e.g.: int > long
+
+                  int myInt = 0;
+                  long x = (long)myInt;
+
+         L conversão de restrição: alta precisão > baixa precisão
+            e.g.: decimal > int
+
+                  decimal myDecimal: 1.23456789m;
+                  int myInt = (int)myDecimal;
+
+            (acarreta em possível perda de precisão)
+
 var - variável genérica e adaptável a qualquer tipo de dado
 
 formatação de Hard-Code
