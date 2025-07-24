@@ -116,6 +116,7 @@ Random - atribui á variavel posposta a ela o atributo de ser int e de ser
 .ToUpper() - reescreve uma string com todas as letras maiúsculas
 .Contains() - checa se há um algo, declarado dentro dele, em um outro algo
 .IndexOf() - acha a primeira ocorrência de algo
+.ToString() - conversão de expansão que converte dados em ums string
 .Substring(start, length) - pega apenas parte de uma string (começando pela
                             posição do "start", com o tamanho de "length"
 .Remove() - corta parte da string fora exatamente como o .Substring()
