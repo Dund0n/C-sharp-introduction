@@ -1,18 +1,22 @@
 tipos de dados:
 string - inferem sequência de letras, "" VERMELHO (Cor do IntelliSense)
 char - infere um único caractere, '' VERMELHO (Cor do IntelliSense)
-int - infere um número pertencente aos inteiros (Z), () (o parênteses pode ser 
+números - infere um número tipo integral, () (o parênteses pode ser 
       omitido) VERDE (Cor do IntelliSense)
-     L tipos de números inteiros:
-       sbyte: -128 a 127
-       short: -32768 - 32767
-       int: -2147483648 to 2147483647
-       long   : -9223372036854775808 to 9223372036854775807
-Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F 
-        (1-9) VERDE
-Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 
-         (1-19) VERDE
-Decimal - precisão alta, lento - 0.12345678901234567890123456789m (1-29) VERDE
+      L tipos de números assinalados:
+         sbyte: -128 a 127
+         short: -32768 a 32767
+         int: -2147483648 a 2147483647
+         long: -9223372036854775808 a 9223372036854775807
+      L tipos de números não assinalados:
+         byte: 0 a 255
+         ushort: 0 a 65535
+         uint: 0 a 4294967295
+         ulong: 0 a 18446744073709551615
+      L tipos de números flutuantes (com casas decimais)
+         Float: -3,4028235E+38 to 3,4028235E+38 (precisão de 9 casas)
+         Double: -1,7976931348623157E+308 to 1,7976931348623157E+308 (precisão de                   17 casas)
+         Decimal: -79228162514264337593543950335 to 79228162514264337593543950335                   (precisão de 29 casas)
 var - variável genérica e adaptável a qualquer tipo de dado
 
 formatação de Hard-Code
