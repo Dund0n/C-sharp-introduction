@@ -2,7 +2,12 @@ tipos de dados:
 string - inferem sequência de letras, "" VERMELHO (Cor do IntelliSense)
 char - infere um único caractere, '' VERMELHO (Cor do IntelliSense)
 int - infere um número pertencente aos inteiros (Z), () (o parênteses pode ser 
-      omitido) VERDE (Cor do IntelliSense) 
+      omitido) VERDE (Cor do IntelliSense)
+     L tipos de números inteiros:
+       sbyte: -128 a 127
+       short: -32768 - 32767
+       int: -2147483648 to 2147483647
+       long   : -9223372036854775808 to 9223372036854775807
 Float - número com precisão baixa de decimais, porém, rapida - 0.123456789F 
         (1-9) VERDE
 Double - padrão da linguagem. precisão mediana - 0.1234567890123456789 
